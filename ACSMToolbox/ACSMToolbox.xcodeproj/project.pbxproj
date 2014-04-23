@@ -21,6 +21,9 @@
 		346493A618E29DB6002221D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3464938818E29DB5002221D1 /* UIKit.framework */; };
 		346493AE18E29DB6002221D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 346493AC18E29DB6002221D1 /* InfoPlist.strings */; };
 		346493B018E29DB6002221D1 /* ACSMToolboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 346493AF18E29DB6002221D1 /* ACSMToolboxTests.m */; };
+		346B747F1907821C008EBE16 /* MetabolicRateCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346B747E1907821C008EBE16 /* MetabolicRateCalculatorViewController.m */; };
+		347A61861907925000941FFE /* MetabolicRateCalculatorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A61851907925000941FFE /* MetabolicRateCalculatorListViewController.m */; };
+		347A6189190797BE00941FFE /* UIView+FindFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A6188190797BE00941FFE /* UIView+FindFirstResponder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		346493AB18E29DB6002221D1 /* ACSMToolboxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ACSMToolboxTests-Info.plist"; sourceTree = "<group>"; };
 		346493AD18E29DB6002221D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		346493AF18E29DB6002221D1 /* ACSMToolboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACSMToolboxTests.m; sourceTree = "<group>"; };
+		346B747D1907821C008EBE16 /* MetabolicRateCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetabolicRateCalculatorViewController.h; sourceTree = "<group>"; };
+		346B747E1907821C008EBE16 /* MetabolicRateCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetabolicRateCalculatorViewController.m; sourceTree = "<group>"; };
+		347A61841907925000941FFE /* MetabolicRateCalculatorListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetabolicRateCalculatorListViewController.h; sourceTree = "<group>"; };
+		347A61851907925000941FFE /* MetabolicRateCalculatorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetabolicRateCalculatorListViewController.m; sourceTree = "<group>"; };
+		347A6187190797BE00941FFE /* UIView+FindFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindFirstResponder.h"; sourceTree = "<group>"; };
+		347A6188190797BE00941FFE /* UIView+FindFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindFirstResponder.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,11 +123,17 @@
 			children = (
 				3464939318E29DB5002221D1 /* AppDelegate.h */,
 				3464939418E29DB5002221D1 /* AppDelegate.m */,
+				3464939C18E29DB5002221D1 /* Images.xcassets */,
 				3464939618E29DB5002221D1 /* Main.storyboard */,
+				347A61841907925000941FFE /* MetabolicRateCalculatorListViewController.h */,
+				347A61851907925000941FFE /* MetabolicRateCalculatorListViewController.m */,
+				346B747D1907821C008EBE16 /* MetabolicRateCalculatorViewController.h */,
+				346B747E1907821C008EBE16 /* MetabolicRateCalculatorViewController.m */,
+				3464938B18E29DB5002221D1 /* Supporting Files */,
 				3464939918E29DB5002221D1 /* ViewController.h */,
 				3464939A18E29DB5002221D1 /* ViewController.m */,
-				3464939C18E29DB5002221D1 /* Images.xcassets */,
-				3464938B18E29DB5002221D1 /* Supporting Files */,
+				347A6187190797BE00941FFE /* UIView+FindFirstResponder.h */,
+				347A6188190797BE00941FFE /* UIView+FindFirstResponder.m */,
 			);
 			path = ACSMToolbox;
 			sourceTree = "<group>";
@@ -249,8 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3464939B18E29DB5002221D1 /* ViewController.m in Sources */,
+				347A6189190797BE00941FFE /* UIView+FindFirstResponder.m in Sources */,
+				347A61861907925000941FFE /* MetabolicRateCalculatorListViewController.m in Sources */,
 				3464939518E29DB5002221D1 /* AppDelegate.m in Sources */,
 				3464939118E29DB5002221D1 /* main.m in Sources */,
+				346B747F1907821C008EBE16 /* MetabolicRateCalculatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +473,7 @@
 				346493B518E29DB6002221D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		346493B618E29DB6002221D1 /* Build configuration list for PBXNativeTarget "ACSMToolboxTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +482,7 @@
 				346493B818E29DB6002221D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
