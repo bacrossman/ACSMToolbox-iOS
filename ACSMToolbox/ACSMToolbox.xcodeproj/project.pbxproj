@@ -24,6 +24,12 @@
 		346B747F1907821C008EBE16 /* MetabolicRateCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 346B747E1907821C008EBE16 /* MetabolicRateCalculatorViewController.m */; };
 		347A61861907925000941FFE /* MetabolicRateCalculatorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A61851907925000941FFE /* MetabolicRateCalculatorListViewController.m */; };
 		347A6189190797BE00941FFE /* UIView+FindFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A6188190797BE00941FFE /* UIView+FindFirstResponder.m */; };
+		347A618C1908400E00941FFE /* ACSMToolboxModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 347A618A1908400E00941FFE /* ACSMToolboxModel.xcdatamodeld */; };
+		347A618F1908555C00941FFE /* CoreDataStoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A618E1908555C00941FFE /* CoreDataStoreController.m */; };
+		347A6192190856D200941FFE /* UserProfileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A6191190856D200941FFE /* UserProfileListViewController.m */; };
+		347A619519085DFC00941FFE /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A619419085DFC00941FFE /* UserProfile.m */; };
+		347A619919085E9800941FFE /* UserProfile+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A619819085E9800941FFE /* UserProfile+CoreData.m */; };
+		347A619C19088AD000941FFE /* UserProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A619B19088AD000941FFE /* UserProfileEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,17 @@
 		347A61851907925000941FFE /* MetabolicRateCalculatorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetabolicRateCalculatorListViewController.m; sourceTree = "<group>"; };
 		347A6187190797BE00941FFE /* UIView+FindFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindFirstResponder.h"; sourceTree = "<group>"; };
 		347A6188190797BE00941FFE /* UIView+FindFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindFirstResponder.m"; sourceTree = "<group>"; };
+		347A618B1908400E00941FFE /* ACSMToolboxModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ACSMToolboxModel.xcdatamodel; sourceTree = "<group>"; };
+		347A618D1908555C00941FFE /* CoreDataStoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStoreController.h; sourceTree = "<group>"; };
+		347A618E1908555C00941FFE /* CoreDataStoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStoreController.m; sourceTree = "<group>"; };
+		347A6190190856D200941FFE /* UserProfileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileListViewController.h; sourceTree = "<group>"; };
+		347A6191190856D200941FFE /* UserProfileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileListViewController.m; sourceTree = "<group>"; };
+		347A619319085DFC00941FFE /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
+		347A619419085DFC00941FFE /* UserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfile.m; sourceTree = "<group>"; };
+		347A619719085E9800941FFE /* UserProfile+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserProfile+CoreData.h"; sourceTree = "<group>"; };
+		347A619819085E9800941FFE /* UserProfile+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserProfile+CoreData.m"; sourceTree = "<group>"; };
+		347A619A19088AD000941FFE /* UserProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileEditViewController.h; sourceTree = "<group>"; };
+		347A619B19088AD000941FFE /* UserProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +138,11 @@
 		3464938A18E29DB5002221D1 /* ACSMToolbox */ = {
 			isa = PBXGroup;
 			children = (
+				347A619619085E0300941FFE /* Models */,
 				3464939318E29DB5002221D1 /* AppDelegate.h */,
 				3464939418E29DB5002221D1 /* AppDelegate.m */,
+				347A618D1908555C00941FFE /* CoreDataStoreController.h */,
+				347A618E1908555C00941FFE /* CoreDataStoreController.m */,
 				3464939C18E29DB5002221D1 /* Images.xcassets */,
 				3464939618E29DB5002221D1 /* Main.storyboard */,
 				347A61841907925000941FFE /* MetabolicRateCalculatorListViewController.h */,
@@ -130,10 +150,14 @@
 				346B747D1907821C008EBE16 /* MetabolicRateCalculatorViewController.h */,
 				346B747E1907821C008EBE16 /* MetabolicRateCalculatorViewController.m */,
 				3464938B18E29DB5002221D1 /* Supporting Files */,
-				3464939918E29DB5002221D1 /* ViewController.h */,
-				3464939A18E29DB5002221D1 /* ViewController.m */,
 				347A6187190797BE00941FFE /* UIView+FindFirstResponder.h */,
 				347A6188190797BE00941FFE /* UIView+FindFirstResponder.m */,
+				347A6190190856D200941FFE /* UserProfileListViewController.h */,
+				347A6191190856D200941FFE /* UserProfileListViewController.m */,
+				3464939918E29DB5002221D1 /* ViewController.h */,
+				3464939A18E29DB5002221D1 /* ViewController.m */,
+				347A619A19088AD000941FFE /* UserProfileEditViewController.h */,
+				347A619B19088AD000941FFE /* UserProfileEditViewController.m */,
 			);
 			path = ACSMToolbox;
 			sourceTree = "<group>";
@@ -165,6 +189,18 @@
 				346493AC18E29DB6002221D1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		347A619619085E0300941FFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				347A618A1908400E00941FFE /* ACSMToolboxModel.xcdatamodeld */,
+				347A619319085DFC00941FFE /* UserProfile.h */,
+				347A619419085DFC00941FFE /* UserProfile.m */,
+				347A619719085E9800941FFE /* UserProfile+CoreData.h */,
+				347A619819085E9800941FFE /* UserProfile+CoreData.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +299,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347A618F1908555C00941FFE /* CoreDataStoreController.m in Sources */,
+				347A618C1908400E00941FFE /* ACSMToolboxModel.xcdatamodeld in Sources */,
 				3464939B18E29DB5002221D1 /* ViewController.m in Sources */,
+				347A619C19088AD000941FFE /* UserProfileEditViewController.m in Sources */,
+				347A619919085E9800941FFE /* UserProfile+CoreData.m in Sources */,
 				347A6189190797BE00941FFE /* UIView+FindFirstResponder.m in Sources */,
+				347A619519085DFC00941FFE /* UserProfile.m in Sources */,
 				347A61861907925000941FFE /* MetabolicRateCalculatorListViewController.m in Sources */,
 				3464939518E29DB5002221D1 /* AppDelegate.m in Sources */,
+				347A6192190856D200941FFE /* UserProfileListViewController.m in Sources */,
 				3464939118E29DB5002221D1 /* main.m in Sources */,
 				346B747F1907821C008EBE16 /* MetabolicRateCalculatorViewController.m in Sources */,
 			);
@@ -485,6 +527,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		347A618A1908400E00941FFE /* ACSMToolboxModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				347A618B1908400E00941FFE /* ACSMToolboxModel.xcdatamodel */,
+			);
+			currentVersion = 347A618B1908400E00941FFE /* ACSMToolboxModel.xcdatamodel */;
+			path = ACSMToolboxModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3464937918E29DB5002221D1 /* Project object */;
 }
