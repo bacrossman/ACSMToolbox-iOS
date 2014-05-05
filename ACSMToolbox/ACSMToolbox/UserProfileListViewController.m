@@ -9,6 +9,8 @@
 #import "UserProfileListViewController.h"
 #import "CoreDataStoreController.h"
 #import "UserProfile+CoreData.h"
+#import "UserProfileListCell.h"
+#import "UserProfileEditViewController.h"
 
 @interface UserProfileListViewController ()
 @property (nonatomic,strong) NSArray* userProfiles;
@@ -35,23 +37,33 @@
     self.genericProfiles = @[];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void)viewWillAppear:(BOOL)animated {
 
+    [super viewWillAppear:animated];
+    
     [[CoreDataStoreController sharedInstance] loadManagedDocumentWithCompletionHandler:^(BOOL success) {
         NSManagedObjectContext* context = [[CoreDataStoreController sharedInstance] managedObjectContext];
-
+        
         self.userProfiles = [UserProfile fetchUserProfilesFromContext:context];
         
         [self.tableView reloadData];
     }];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if ([segue.identifier isEqualToString:@"EditProfile"])
+    {
+        UserProfileEditViewController* dest = [segue destinationViewController];
+        NSIndexPath* indexPath = [self.tableView indexPathForCell:sender];
+        switch (indexPath.section) {
+            case 0:
+                dest.userProfile = self.userProfiles[indexPath.item];
+            case 1:
+            default:
+                dest.userProfile = nil;
+        }
+    }
 }
 
 #pragma mark - Table view data source
@@ -71,15 +83,23 @@
     return 0;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UserProfileListCell* cell;
     
-    // Configure the cell...
+    if (indexPath.section == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"UserProfileCell" forIndexPath:indexPath];
+        UserProfile* profile = self.userProfiles[indexPath.item];
+        cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile.firstName, profile.lastName];
+        cell.detailLabel.text = [NSString stringWithFormat:@"%@ - %@%@", profile.sex, profile.heightCm, @"cm"];
+    } else {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"StockProfileCell" forIndexPath:indexPath];
+        UserProfile* profile = self.genericProfiles[indexPath.item];
+        cell.nameLabel.text = profile.firstName;
+        cell.detailLabel.text = [NSString stringWithFormat:@"%@ - %@", profile.sex, profile.trainingProfile];
+    }
     
     return cell;
 }
-*/
 
 @end

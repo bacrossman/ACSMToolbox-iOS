@@ -8,17 +8,9 @@
 
 #import "UserProfileEditViewController.h"
 #import "CoreDataStoreController.h"
+#import "SimpleSelectionViewController.h"
 
 @interface UserProfileEditViewController ()
-
-@property (nonatomic,strong) IBOutlet UITextField* firstName;
-@property (nonatomic,strong) IBOutlet UITextField* lastName;
-@property (nonatomic,strong) IBOutlet UILabel* birthDate;
-@property (nonatomic,strong) IBOutlet UISegmentedControl* sex;
-@property (nonatomic,strong) IBOutlet UILabel* trainingProfile;
-
-@property (nonatomic,strong) IBOutlet UITextField* height;
-@property (nonatomic,strong) IBOutlet UITextField* weight;
 
 @property (nonatomic,strong) NSDateFormatter* dateFormatter;
 
@@ -58,7 +50,7 @@
             NSManagedObjectContext* context = [[CoreDataStoreController sharedInstance] managedObjectContext];
             
             // Create a new userProfile
-            self.userProfile = [UserProfile createUserProfileInContext:context];
+            _userProfile = [UserProfile createUserProfileInContext:context];
             
             self.userProfile.firstName = self.firstName.text;
             self.userProfile.lastName = self.lastName.text;
@@ -90,6 +82,39 @@
 - (BOOL) validateUserProfile {
     // TODO: Validate for missing values and other errors
     return YES;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"SelectTrainingProfile"])
+    {
+        SimpleSelectionViewController* dest = [segue destinationViewController];
+        dest.options = @[
+                         NSLocalizedString(@"White",@"White"),
+                         NSLocalizedString(@"Black",@"Black"),
+                         NSLocalizedString(@"American Indian",@"American Indian"),
+                         NSLocalizedString(@"Hispanic",@"Hispanic"),
+                         NSLocalizedString(@"Japanese",@"Japanese"),
+                         NSLocalizedString(@"Singaporean",@"Singaporean"),
+                         NSLocalizedString(@"Resistance Trained",@"Resistance Trained"),
+                         NSLocalizedString(@"Endurance Trained",@"Endurance Trained"),
+                         NSLocalizedString(@"All Sports",@"All Sports"),
+                         NSLocalizedString(@"Other", @"Other")
+                    ];
+        
+        if ([self.trainingProfile.text length] > 0) {
+            dest.selectedOption = self.trainingProfile.text;
+        }
+    }
+}
+
+- (IBAction) trainingProfileSelected:(UIStoryboardSegue*)segue {
+
+    if ([segue.identifier isEqualToString:@"SimpleSelectionMade"])
+    {
+        SimpleSelectionViewController* source = [segue sourceViewController];
+        self.trainingProfile.text = source.selectedOption;
+    }
 }
 
 - (NSDateFormatter*) dateFormatter {

@@ -30,6 +30,8 @@
 		347A619519085DFC00941FFE /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A619419085DFC00941FFE /* UserProfile.m */; };
 		347A619919085E9800941FFE /* UserProfile+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A619819085E9800941FFE /* UserProfile+CoreData.m */; };
 		347A619C19088AD000941FFE /* UserProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347A619B19088AD000941FFE /* UserProfileEditViewController.m */; };
+		34E0A5FF191744BD00AE5C6F /* UserProfileListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0A5FE191744BD00AE5C6F /* UserProfileListCell.m */; };
+		34E0A603191750AA00AE5C6F /* SimpleSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0A602191750AA00AE5C6F /* SimpleSelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,10 @@
 		347A619819085E9800941FFE /* UserProfile+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserProfile+CoreData.m"; sourceTree = "<group>"; };
 		347A619A19088AD000941FFE /* UserProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileEditViewController.h; sourceTree = "<group>"; };
 		347A619B19088AD000941FFE /* UserProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileEditViewController.m; sourceTree = "<group>"; };
+		34E0A5FD191744BD00AE5C6F /* UserProfileListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileListCell.h; sourceTree = "<group>"; };
+		34E0A5FE191744BD00AE5C6F /* UserProfileListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileListCell.m; sourceTree = "<group>"; };
+		34E0A601191750AA00AE5C6F /* SimpleSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSelectionViewController.h; sourceTree = "<group>"; };
+		34E0A602191750AA00AE5C6F /* SimpleSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,10 @@
 				3464939A18E29DB5002221D1 /* ViewController.m */,
 				347A619A19088AD000941FFE /* UserProfileEditViewController.h */,
 				347A619B19088AD000941FFE /* UserProfileEditViewController.m */,
+				34E0A5FD191744BD00AE5C6F /* UserProfileListCell.h */,
+				34E0A5FE191744BD00AE5C6F /* UserProfileListCell.m */,
+				34E0A601191750AA00AE5C6F /* SimpleSelectionViewController.h */,
+				34E0A602191750AA00AE5C6F /* SimpleSelectionViewController.m */,
 			);
 			path = ACSMToolbox;
 			sourceTree = "<group>";
@@ -306,7 +316,9 @@
 				347A619919085E9800941FFE /* UserProfile+CoreData.m in Sources */,
 				347A6189190797BE00941FFE /* UIView+FindFirstResponder.m in Sources */,
 				347A619519085DFC00941FFE /* UserProfile.m in Sources */,
+				34E0A5FF191744BD00AE5C6F /* UserProfileListCell.m in Sources */,
 				347A61861907925000941FFE /* MetabolicRateCalculatorListViewController.m in Sources */,
+				34E0A603191750AA00AE5C6F /* SimpleSelectionViewController.m in Sources */,
 				3464939518E29DB5002221D1 /* AppDelegate.m in Sources */,
 				347A6192190856D200941FFE /* UserProfileListViewController.m in Sources */,
 				3464939118E29DB5002221D1 /* main.m in Sources */,

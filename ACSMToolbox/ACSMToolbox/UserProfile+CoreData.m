@@ -17,6 +17,7 @@
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
+    [request setReturnsObjectsAsFaults:NO];
     
     NSError *error;
     NSArray *array = [context executeFetchRequest:request error:&error];
