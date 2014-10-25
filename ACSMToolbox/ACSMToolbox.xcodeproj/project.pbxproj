@@ -14,7 +14,6 @@
 		3464939118E29DB5002221D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3464939018E29DB5002221D1 /* main.m */; };
 		3464939518E29DB5002221D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3464939418E29DB5002221D1 /* AppDelegate.m */; };
 		3464939818E29DB5002221D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3464939618E29DB5002221D1 /* Main.storyboard */; };
-		3464939B18E29DB5002221D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3464939A18E29DB5002221D1 /* ViewController.m */; };
 		3464939D18E29DB5002221D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3464939C18E29DB5002221D1 /* Images.xcassets */; };
 		346493A418E29DB6002221D1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346493A318E29DB6002221D1 /* XCTest.framework */; };
 		346493A518E29DB6002221D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3464938418E29DB5002221D1 /* Foundation.framework */; };
@@ -56,8 +55,6 @@
 		3464939318E29DB5002221D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3464939418E29DB5002221D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3464939718E29DB5002221D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3464939918E29DB5002221D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3464939A18E29DB5002221D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3464939C18E29DB5002221D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		346493A218E29DB6002221D1 /* ACSMToolboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACSMToolboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		346493A318E29DB6002221D1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -160,8 +157,6 @@
 				347A6188190797BE00941FFE /* UIView+FindFirstResponder.m */,
 				347A6190190856D200941FFE /* UserProfileListViewController.h */,
 				347A6191190856D200941FFE /* UserProfileListViewController.m */,
-				3464939918E29DB5002221D1 /* ViewController.h */,
-				3464939A18E29DB5002221D1 /* ViewController.m */,
 				347A619A19088AD000941FFE /* UserProfileEditViewController.h */,
 				347A619B19088AD000941FFE /* UserProfileEditViewController.m */,
 				34E0A5FD191744BD00AE5C6F /* UserProfileListCell.h */,
@@ -311,7 +306,6 @@
 			files = (
 				347A618F1908555C00941FFE /* CoreDataStoreController.m in Sources */,
 				347A618C1908400E00941FFE /* ACSMToolboxModel.xcdatamodeld in Sources */,
-				3464939B18E29DB5002221D1 /* ViewController.m in Sources */,
 				347A619C19088AD000941FFE /* UserProfileEditViewController.m in Sources */,
 				347A619919085E9800941FFE /* UserProfile+CoreData.m in Sources */,
 				347A6189190797BE00941FFE /* UIView+FindFirstResponder.m in Sources */,
